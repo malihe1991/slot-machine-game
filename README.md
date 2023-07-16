@@ -29,7 +29,7 @@ There is CASH OUT button on the screen, but there's a twist there as well.
 ## Project setup
 
 ```
-npm install
+npm install --force
 ```
 
 ### Compiles and hot-reloads for development
