@@ -4,13 +4,13 @@ import Playground from '@/components/Playground.vue';
 describe('playground', () => {
   const wrapper = shallowMount(Playground);
 
-  it('when resetBlocks method is called', () => {
+  it('Reset BlocksValue', () => {
     wrapper.vm.blocksValue = [1, 2, 3];
     wrapper.vm.resetBlocks();
     expect(wrapper.vm.blocksValue).toEqual([]);
   });
 
-  it('When getRandomBlocks method is called', () => {
+  it('Get Random Blocks', () => {
     const randomList = wrapper.vm.getRandomBlocks();
 
     expect(randomList.length).toBe(3);
@@ -24,12 +24,12 @@ describe('playground', () => {
     });
   });
 
-  it('When hasChance method is called', () => {
+  it('Check chance', () => {
     const result = wrapper.vm.hasChance();
     expect(typeof result === 'boolean').toBeTruthy();
   });
 
-  it('When hasCashOutHover method is called', () => {
+  it('Handle cash out actions', () => {
     const hasCashOutHover = jest.fn(() => {
       const moveRight = wrapper.vm.moveRight;
       const has50Chance = true;
